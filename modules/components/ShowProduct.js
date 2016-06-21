@@ -50,9 +50,9 @@ class ShowProduct extends React.Component {
     $.ajax({
       url: `${BASE_URL}/products/${this.state.product.id}`,
       type: 'PUT',
-      data: { product: { name, description, base_price, quantity_on_hand }}
+      data: { product: { name, description, base_price, quantity_on_hand } }
     }).done( product => {
-      this.setState({ product, edit: false })
+      this.setState( { product, edit: false } )
     })
 
   }

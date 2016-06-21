@@ -37,14 +37,14 @@ class Home extends React.Component {
   }
 
   addProduct(product) {
-    this.setState({ products: [...this.state.products, {...product} ] })
+    this.setState({ products: [ ...this.state.products, { ...product } ] })
   }
 
   render() {
     return (
       <div className="row">
-        <Products 
-          products={this.state.products} 
+        <Products
+          products={this.state.products}
           deleteProduct={this.deleteProduct.bind(this)}/>
         <AddProduct addProduct={this.addProduct.bind(this)} />
       </div>
@@ -53,4 +53,3 @@ class Home extends React.Component {
 }
 
 export default Home
-
